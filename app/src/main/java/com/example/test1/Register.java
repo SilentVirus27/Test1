@@ -19,20 +19,15 @@ public class Register extends AppCompatActivity {
     private LinearLayout layout_register ;
     private Animation animation_fadein;
     EditText name,email,contactno,password;
-    Button signin,signup;
+    Button signin_reg,signup_reg;
 
     private void init(){
-        signin = (Button)  findViewById(R.id.signin);
-        signup = (Button) findViewById(R.id.signup);
+        signin_reg = (Button)  findViewById(R.id.signin_reg);
+        signup_reg = (Button) findViewById(R.id.signup_reg);
         name = findViewById(R.id.et_name);
         email = findViewById(R.id.et_email);
         contactno = findViewById(R.id.et_contactno);
         password = findViewById(R.id.et_password);
-
-        name.setError("Cannot be Empty");
-        email.setError("Cannot be Empty");
-        contactno.setError("Cannot be Empty");
-        password.setError("Cannot be Empty");
     }
 
 
@@ -54,23 +49,14 @@ public class Register extends AppCompatActivity {
             }
         },500);
 
-        signup.setOnClickListener(new View.OnClickListener() {
+        signup_reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences regs = PreferenceManager.getDefaultSharedPreferences(Register.this);
-                SharedPreferences.Editor editor = regs.edit();
-                editor.putString("Name",name.getText().toString());
-                editor.putString("Email",email.getText().toString());
-                editor.putString("Contact",contactno.getText().toString());
-                editor.putString("Password",password.getText().toString());
-
-                editor.commit();
-                Intent signup_Intent = new Intent(Register.this,LoginActivity.class);
-                startActivity(signup_Intent);
+                Signup();
             }
         });
 
-        signin.setOnClickListener(new View.OnClickListener() {
+        signin_reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent signin_Intent = new Intent(Register.this,LoginActivity.class);
@@ -79,5 +65,27 @@ public class Register extends AppCompatActivity {
         });
 
 
+    }
+
+    public void Signup(){
+        SharedPreferences regs = PreferenceManager.getDefaultSharedPreferences(Register.this);
+        SharedPreferences.Editor editor = regs.edit();
+        if(name.getText().toString().isEmpty()){
+            name.setError("Please Enter Name");
+        }else if(email.getText().toString().isEmpty()){
+            email.setError("Please Enter Name");
+        }else if(contactno.getText().toString().isEmpty()){
+            contactno.setError("Please Enter Name");
+        }else if(password.getText().toString().isEmpty()){
+            password.setError("Please Enter Name");
+        }else{
+            editor.putString("Name",name.getText().toString());
+            editor.putString("Email",email.getText().toString());
+            editor.putString("Contact",contactno.getText().toString());
+            editor.putString("Password",password.getText().toString());
+            editor.commit();
+            Intent signup_Intent = new Intent(Register.this,LoginActivity.class);
+            startActivity(signup_Intent);
+        }
     }
 }

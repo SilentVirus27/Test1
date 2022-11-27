@@ -162,7 +162,7 @@
                 <!--Signup button-->
                 <soup.neumorphism.NeumorphButton
                     style="@style/Widget.Neumorph.Button"
-                    android:id="@+id/signup"
+                    android:id="@+id/signup_reg"
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
@@ -173,7 +173,7 @@
                 <!--Signin button-->
                 <soup.neumorphism.NeumorphButton
                     style="@style/Widget.Neumorph.Button"
-                    android:id="@+id/signin"
+                    android:id="@+id/signin_reg"
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"

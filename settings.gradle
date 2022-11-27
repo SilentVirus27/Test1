@@ -13,5 +13,5 @@ dependencyResolutionManagement {
         maven {url 'https://jitpack.io'}
     }
 }
-rootProject.name = "Test1"
+rootProject.name = "Expense Manager"
 include ':app'

@@ -73,6 +73,8 @@ public class LoginActivity extends AppCompatActivity {
             if(loginid.getText().toString().equals(dbloginid)){
                 if (password.getText().toString().equals(dbpassword)){
                     Intent FirstIntent = new Intent(LoginActivity.this,home.class);
+                    FirstIntent.putExtra("Username",id);
+                    FirstIntent.putExtra("Password",pass);
                     startActivity(FirstIntent);
                 }else password.setError("Wrong Password");
             }else loginid.setError("Wrong Email Id");
