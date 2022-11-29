@@ -7,4 +7,10 @@
     <string name="email">Email</string>
     <string name="contact_no">Contact No</string>
     <string name="password">Password</string>
+    <string name="expense">Expense</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="update">Update</string>
+    <string name="add_income">Add Income</string>
+    <string name="add_expense">Add Expense</string>
 </resources>

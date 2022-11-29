@@ -7,8 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
-
+    <color name="green_200">#70FA76</color>
+    <color name="green_500">#28F304</color>
+    <color name="green_800">#125706</color>
+    <color name="red_200">#F69595</color>
+    <color name="red_500">#F30404</color>
+    <color name="red_800">#570606</color>
     <color name="text_color">#1E4175</color>
     <color name="background_color">#ecf0f3</color>
     <color name="highlight">#ffffff</color>
@@ -16,4 +20,8 @@
 
     <color name="light_background">#ecf0f3</color>
     <color name="textColor">#193566</color>
+
+    //Error  for the color
+
+
 </resources>

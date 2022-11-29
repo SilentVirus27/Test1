@@ -37,7 +37,11 @@
         android:layout_below="@id/layout_top"
         android:src="@drawable/background_bottom"
         android:transitionName="img_tree" />
-
+    <ProgressBar
+        android:id="@+id/signin_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
     <LinearLayout
         android:id="@+id/layout_login"
         android:layout_width="match_parent"
@@ -107,7 +111,8 @@
         </soup.neumorphism.NeumorphCardView>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
             <soup.neumorphism.NeumorphButton
                 style="@style/Widget.Neumorph.Button"
                 android:id="@+id/signin"
@@ -129,10 +134,19 @@
                 android:text="Sign Up"
                 android:textColor="@color/textColor"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                />
+
         </LinearLayout>
-
-
+        <TextView
+            android:id="@+id/forgot_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forget Password?"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"/>
     </LinearLayout>
 
 </RelativeLayout>

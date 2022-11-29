@@ -40,6 +40,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent,options.toBundle());
             }
 
-        }, 2000);
+        }, 1000);
     }
 }
