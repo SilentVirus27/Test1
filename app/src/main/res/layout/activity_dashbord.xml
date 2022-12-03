@@ -4,67 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
     android:orientation="vertical"
-    tools:context=".Dashbord">
-    <!--Graph and Recent-->
-    <LinearLayout
-        android:id="@+id/graph_recent"
-        android:orientation="vertical"
+    tools:context=".Dashbord"
+    android:background="@color/light_background">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/layout_frame">
+    </FrameLayout>
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
-        <!--Graph-->
-        <androidx.cardview.widget.CardView
-            android:layout_margin="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="300dp">
-            <TextView
-                android:textSize="24sp"
-                android:layout_gravity="center"
-                android:text="Graph"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </androidx.cardview.widget.CardView>
-        <!--Recent Entry-->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/dash_recyclerview"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="220dp"/>
+        android:id="@+id/bottom_nevigation"
+        app:mbn_shadowColor="@color/shadowColor"
+        app:mbn_backgroundBottomColor="@color/textColor"
+        app:mbn_circleColor="@color/circleColor"
+        app:mbn_countBackgroundColor="@color/countBackgroundColor"
+        app:mbn_countTextColor="@color/countTextColor"
+        app:mbn_defaultIconColor="@color/defaultIconColor"
+        app:mbn_selectedIconColor="@color/textColor"/>
     </LinearLayout>
-    <LinearLayout
-        android:id="@+id/layout_dash_bottom_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-
-        tools:ignore="MissingConstraints">
-        <soup.neumorphism.NeumorphButton
-            style="@style/Widget.Neumorph.Button"
-            android:id="@+id/addIncome"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="@string/add_income"
-            android:layout_marginStart="10dp"
-            android:textColor="@color/green_500"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"/>
-        <soup.neumorphism.NeumorphButton
-            style="@style/Widget.Neumorph.Button"
-            android:id="@+id/addExpense"
-            android:layout_width="160dp"
-            android:layout_marginStart="10dp"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="@string/add_expense"
-            android:textColor="@color/red_500"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            />
-
-    </LinearLayout>
-
-
-</LinearLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CategoryFragment"
+    android:background="@color/light_background">
+
+    <LinearLayout
+        android:id="@+id/add_category"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        tools:ignore="MissingConstraints">
+
+        <!--Profile Logo-->
+        <LinearLayout
+            android:id="@+id/layout_profile_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            tools:ignore="MissingConstraints">
+            <ImageView
+                android:id="@+id/img_progile_logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logo"
+                android:transitionName="logo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expense"
+                android:layout_centerHorizontal="true"
+
+                android:textSize="40sp"
+                android:fontFamily="sans-serif-thin"
+                android:textColor="@color/textColor"
+                android:transitionName="logo_text"
+                tools:ignore="ObsoleteLayoutParam" />
+        </LinearLayout>
+        <!--Add Category-->
+        <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                app:neumorph_shapeType="pressed">
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    android:id="@+id/layout_add_cat_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_category"
+                        android:textColor="@color/textColor"
+                        android:gravity="center_vertical"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/layout_add_cat_radio"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_add_cat_text">
+                    <RadioGroup
+                        android:id="@+id/typeRadioGroup"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">                        >
+                        <RadioButton
+                            android:id="@+id/accountRadio"
+                            android:layout_width="120dp"
+                            android:textColor="@color/textColor"
+                            android:text="@string/account"
+                            android:textSize="20sp"
+                            android:layout_height="wrap_content"/>
+                        <RadioButton
+                            android:id="@+id/cashRadio"
+                            android:layout_width="120dp"
+                            android:textSize="20sp"
+                            android:textColor="@color/textColor"
+                            android:text="@string/cash"
+                            android:checked="true"
+                            android:layout_height="wrap_content"/>
+                    </RadioGroup>
+                    <LinearLayout
+                        android:id="@+id/layout_add_cat_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Category :"
+                            android:textColor="@color/textColor"
+                            android:textSize="20sp"
+                            android:layout_marginStart="5dp"/>
+                        <EditText
+                            android:id="@+id/et_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textColor"
+                            android:textSize="20sp"
+                            android:inputType="text"
+                            android:textCursorDrawable="@drawable/cursor"/>
+                    </LinearLayout>
+                    <!--Confirm Button-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <soup.neumorphism.NeumorphButton
+                            style="@style/Widget.Neumorph.Button"
+                            android:id="@+id/confirm_add_category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="@string/Confirm"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/textColor"
+                            android:layout_marginTop="10dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </soup.neumorphism.NeumorphCardView>
+
+
+        <!--<androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dash_recyclerview"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>-->
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
