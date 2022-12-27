@@ -43,6 +43,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:20.1.0'
     implementation 'com.google.firebase:firebase-analytics:21.2.0'
     implementation 'com.etebarian:meow-bottom-navigation-java:1.2.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.github.blackfizz:eazegraph:1.2.5l'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'

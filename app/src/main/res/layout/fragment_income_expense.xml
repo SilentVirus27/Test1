@@ -78,20 +78,20 @@
                     </LinearLayout>
                     <!--Radio-->
                     <RadioGroup
-                        android:id="@+id/typeRadioGroup"
+                        android:id="@+id/typeRadioGroupIE"
                         android:layout_width="match_parent"
                         android:orientation="horizontal"
                         android:layout_height="wrap_content"
                         android:padding="10dp">
                         <RadioButton
-                            android:id="@+id/incomeRadio"
+                            android:id="@+id/incomeRadioIE"
                             android:layout_width="120dp"
                             android:textColor="@color/green_800"
                             android:text="Income"
                             android:textSize="20sp"
                             android:layout_height="wrap_content"/>
                         <RadioButton
-                            android:id="@+id/expenseRadio"
+                            android:id="@+id/expenseRadioIE"
                             android:layout_width="120dp"
                             android:textSize="20sp"
                             android:textColor="@color/red_500"
@@ -99,6 +99,62 @@
                             android:checked="true"
                             android:layout_height="wrap_content"/>
                     </RadioGroup>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red_200"
+                            android:text="Note: For 'Income' No need to select sub category"
+                            android:layout_marginBottom="3dp"
+                            android:padding="3dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                    <!--payment-->
+                    <!--Category-->
+                    <LinearLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:gravity="center">
+
+                        <Spinner
+                            android:id="@+id/showPaymentMode"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/textColor"
+                            android:contentDescription="@string/selectAccountType"
+                            android:scrollbarTrackVertical="@color/textColor"
+                            android:layout_marginEnd="4dp"
+                            tools:listitem="@layout/accountcategory_row"/>
+                        <Spinner
+                            android:id="@+id/showCategoryToSelect"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/textColor"
+                            android:contentDescription="@string/selectAccountType"
+                            android:scrollbarTrackVertical="@color/textColor"
+                            android:layout_marginEnd="4dp"
+                            android:visibility="visible"
+                            tools:listitem="@layout/accountcategory_row"/>
+                        <!--<EditText
+                            android:id="@+id/category"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textColor"
+                            android:textSize="20sp"
+                            android:textCursorDrawable="@drawable/cursor"/>-->
+                    </LinearLayout>
+
                     <!--Amount-->
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -121,26 +177,7 @@
                             android:textCursorDrawable="@drawable/cursor"/>
 
                     </LinearLayout>
-                    <!--Category-->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
-                        <TextView
-                            android:textColor="@color/textColor"
-                            android:text="Category:"
-                            android:textSize="20sp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                        <EditText
-                            android:id="@+id/category"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/textColor"
-                            android:textSize="20sp"
-                            android:textCursorDrawable="@drawable/cursor"/>
-                    </LinearLayout>
+
                     <!--Note-->
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -201,6 +238,8 @@
                             android:textColor="@color/textColor"
                             android:layout_marginTop="10dp"/>
                     </LinearLayout>
+
+
                 </LinearLayout>
             </soup.neumorphism.NeumorphCardView>
         </LinearLayout>

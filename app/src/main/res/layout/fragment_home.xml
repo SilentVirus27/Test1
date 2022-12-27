@@ -14,10 +14,11 @@
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints">
 
-        <androidx.cardview.widget.CardView
+       <androidx.cardview.widget.CardView
             android:layout_margin="5dp"
             android:layout_width="match_parent"
-            android:layout_height="300dp">
+            android:layout_height="300dp"
+           android:visibility="gone">
             <TextView
                 android:textSize="24sp"
                 android:layout_gravity="center"
@@ -26,13 +27,37 @@
                 android:layout_height="wrap_content"/>
         </androidx.cardview.widget.CardView>
 
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/view_transaction"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="3dp"
+            android:gravity="center_vertical"
+            android:text="Show"
+            android:textColor="@color/textColor"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Transactions"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:layout_marginStart="14dp"
+            android:fontFamily="sans-serif-condensed-light"
+            />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/dash_recyclerview"
-            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="220dp"/>
+            android:layout_height="match_parent"
+            android:tooltipText="test"
+            tools:listitem="@layout/transaction_row"/>
 
-        <LinearLayout
+       <!-- <LinearLayout
             android:id="@+id/layout_dash_bottom_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,7 +86,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 />
-        </LinearLayout>
+        </LinearLayout>-->
     </LinearLayout>
 
 

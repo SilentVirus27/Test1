@@ -13,5 +13,16 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
 
+
+
+        <!--temp color-->
+        <item name="colorShadowDark">@color/neumorph_shadowColorDark</item>
+        <item name="colorShadowLight">@color/neumorph_shadowColorLight</item>
     </style>
+
+    <!--<style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>-->
 </resources>

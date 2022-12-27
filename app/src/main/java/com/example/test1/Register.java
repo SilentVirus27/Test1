@@ -87,8 +87,6 @@ public class Register extends AppCompatActivity {
                 startActivity(signin_Intent);
             }
         });
-
-
     }
 
     public void Signup(){
@@ -126,8 +124,6 @@ public class Register extends AppCompatActivity {
             return;
         }
 
-
-
         mAuth.createUserWithEmailAndPassword(memail,mpassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -152,9 +148,11 @@ public class Register extends AppCompatActivity {
                 else {
                     try{
                         throw task.getException();
-                    } catch (FirebaseAuthUserCollisionException e){
+                    }
+                    catch (FirebaseAuthUserCollisionException e){
                         email.setError("User Already Exist");
-                    } catch (Exception e) {
+                    }
+                    catch (Exception e) {
                         Log.e("Error",e.getMessage());
                     }
                     /*Toast.makeText(getApplicationContext(), "Failed! try again later", Toast.LENGTH_LONG).show();

@@ -54,14 +54,11 @@ public class ProfileFragment extends Fragment  {
         mAuth = FirebaseAuth.getInstance();
         uname = view.findViewById(R.id.p_et_name);
         ucno = view.findViewById(R.id.p_et_contactno);
-
         uemail=view.findViewById(R.id.p_et_email);
 
 
         databaseReference =FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         databaseReference.addValueEventListener(new ValueEventListener() {
-
-
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Map<String, String> map  = (Map) snapshot.getValue();
@@ -82,13 +79,6 @@ public class ProfileFragment extends Fragment  {
                 Toast.makeText(getActivity(), "Faild! to Get Data", Toast.LENGTH_SHORT).show();
             }
         });
-
-        /*update.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });*/
 
         signout.setOnClickListener(new View.OnClickListener() {
             @Override

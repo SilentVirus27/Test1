@@ -12,143 +12,206 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        tools:ignore="MissingConstraints">
-
+        android:padding="10dp">
         <!--Profile Logo-->
         <LinearLayout
             android:id="@+id/layout_profile_top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            tools:ignore="MissingConstraints">
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints,UseCompoundDrawables">
+
             <ImageView
                 android:id="@+id/img_progile_logo"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:contentDescription="@string/logo"
                 android:src="@drawable/logo"
-                android:transitionName="logo"/>
+                android:transitionName="logo" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/expense"
                 android:layout_centerHorizontal="true"
-
-                android:textSize="40sp"
                 android:fontFamily="sans-serif-thin"
+
+                android:text="@string/expense"
                 android:textColor="@color/textColor"
+                android:textSize="40sp"
                 android:transitionName="logo_text"
                 tools:ignore="ObsoleteLayoutParam" />
         </LinearLayout>
         <!--Add Category-->
-        <soup.neumorphism.NeumorphCardView
-                style="@style/Widget.Neumorph.CardView"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="5dp"
+                android:layout_height="match_parent"
                 app:neumorph_shapeType="pressed">
-            <RelativeLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp">
-                <LinearLayout
-                    android:id="@+id/layout_add_cat_text"
+
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/add_category"
-                        android:textColor="@color/textColor"
-                        android:gravity="center_vertical"
-                        android:textSize="20sp"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/layout_add_cat_radio"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/layout_add_cat_text">
-                    <RadioGroup
-                        android:id="@+id/typeRadioGroup"
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_height="wrap_content">                        >
-                        <RadioButton
-                            android:id="@+id/accountRadio"
-                            android:layout_width="120dp"
-                            android:textColor="@color/textColor"
-                            android:text="@string/account"
-                            android:textSize="20sp"
-                            android:layout_height="wrap_content"/>
-                        <RadioButton
-                            android:id="@+id/cashRadio"
-                            android:layout_width="120dp"
-                            android:textSize="20sp"
-                            android:textColor="@color/textColor"
-                            android:text="@string/cash"
-                            android:checked="true"
-                            android:layout_height="wrap_content"/>
-                    </RadioGroup>
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+                    <!--Add Category Text-->
                     <LinearLayout
-                        android:id="@+id/layout_add_cat_edittext"
+                        android:id="@+id/layout_add_cat_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="horizontal">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Category :"
+                            android:gravity="center_vertical"
+                            android:text="@string/add_category"
                             android:textColor="@color/textColor"
                             android:textSize="20sp"
-                            android:layout_marginStart="5dp"/>
-                        <EditText
-                            android:id="@+id/et_category"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/textColor"
-                            android:textSize="20sp"
-                            android:inputType="text"
-                            android:textCursorDrawable="@drawable/cursor"/>
+                            android:textStyle="bold" />
                     </LinearLayout>
-                    <!--Confirm Button-->
+                    <!--Add category Content-->
                     <LinearLayout
+                        android:id="@+id/layout_add_cat_radio"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_below="@id/layout_add_cat_text"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/typeRadioGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/accountRadio"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/online"
+                                android:textColor="@color/textColor"
+                                android:textSize="20sp" />
+
+                            <RadioButton
+                                android:id="@+id/cashRadio"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="@string/cash"
+                                android:textColor="@color/textColor"
+                                android:textSize="20sp" />
+                        </RadioGroup>
+
+                        <LinearLayout
+                            android:id="@+id/layout_add_cat_edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:text="@string/category"
+                                android:textColor="@color/textColor"
+                                android:textSize="20sp" />
+
+                            <EditText
+                                android:id="@+id/et_category"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/enter_category_name"
+                                android:importantForAutofill="no"
+                                android:inputType="text"
+                                android:textColor="@color/textColor"
+                                android:textCursorDrawable="@drawable/cursor"
+                                android:textSize="20sp"
+                                tools:ignore="TextContrastCheck" />
+                        </LinearLayout>
+                        <!--Confirm Button-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <soup.neumorphism.NeumorphButton
+                                android:id="@+id/confirm_add_category"
+                                style="@style/Widget.Neumorph.Button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginBottom="3dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/Confirm"
+                                android:textColor="@color/textColor"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--Add Category Text-->
+                    <LinearLayout
+                        android:id="@+id/layout_view_cat_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="horizontal"
-                        android:gravity="center">
-                        <soup.neumorphism.NeumorphButton
-                            style="@style/Widget.Neumorph.Button"
-                            android:id="@+id/confirm_add_category"
+                        android:layout_below="@id/layout_add_cat_radio">
+
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="16sp"
-                            android:text="@string/Confirm"
                             android:gravity="center_vertical"
+                            android:text="View Category"
                             android:textColor="@color/textColor"
-                            android:layout_marginTop="10dp"/>
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
                     </LinearLayout>
-                </LinearLayout>
-            </RelativeLayout>
-        </soup.neumorphism.NeumorphCardView>
+                    <LinearLayout
+                        android:id="@+id/viewCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/layout_view_cat_text">
+                        <Spinner
+                            android:id="@+id/viewCatSelect"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:backgroundTint="@color/textColor"
+                            android:contentDescription="@string/selectAccountType"
+                            android:minHeight="48dp"
+                            android:scrollbarTrackVertical="@color/textColor" />
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/viewCategoryInAccountSelectedOnline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_below="@id/viewCategory"
+                            tools:listitem="@layout/accountcategory_row"
+                            android:visibility="visible"
+                            />
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/viewCategoryInAccountSelectedCash"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_below="@id/viewCategory"
+                            tools:listitem="@layout/accountcategory_row"
+                            android:visibility="gone"
+                            />
+                    </LinearLayout>
 
+                </RelativeLayout>
+            </soup.neumorphism.NeumorphCardView>
 
-        <!--<androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/dash_recyclerview"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>-->
-
+        </LinearLayout>
 
     </LinearLayout>
-
-
 </FrameLayout>

@@ -16,26 +16,28 @@
         <LinearLayout
             android:id="@+id/layout_profile_top"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_height="89dp"
             android:layout_marginTop="10dp"
             android:gravity="center"
+            android:orientation="horizontal"
             tools:ignore="MissingConstraints">
+
             <ImageView
                 android:id="@+id/img_progile_logo"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/logo"
-                android:transitionName="logo"/>
+                android:transitionName="logo" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/expense"
                 android:layout_centerHorizontal="true"
-
-                android:textSize="40sp"
                 android:fontFamily="sans-serif-thin"
+
+                android:text="@string/expense"
                 android:textColor="@color/textColor"
+                android:textSize="40sp"
                 android:transitionName="logo_text"
                 tools:ignore="ObsoleteLayoutParam" />
         </LinearLayout>
@@ -204,17 +206,18 @@
             android:layout_marginTop="300dp"
 
             tools:ignore="MissingConstraints">
+
             <soup.neumorphism.NeumorphButton
-                style="@style/Widget.Neumorph.Button"
                 android:id="@+id/signout"
+                style="@style/Widget.Neumorph.Button"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:text="@string/sign_out"
-                android:layout_marginStart="30dp"
-                android:textColor="@color/red_500"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/sign_out"
+                android:textColor="@color/red_500"
+                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

@@ -19,10 +19,16 @@
     <string name="Confirm">Confirm Add</string>
     <string name="add_category">Add Category</string>
     <string name="cash">Cash</string>
-    <string name="account">Account</string>
+    <string name="account">Online</string>
     <string name="add_record">Add Record</string>
     <string name="select_date">Select Date</string>
     <string name="date">Date :</string>
     <string name="note">Note :</string>
     <string name="dd_mm_yyyy_or_select_date">DD/MM/YYYY or Select Date</string>
+    <string name="logo">Logo</string>
+    <string name="category">Category :</string>
+    <string name="enter_category_name">Enter Category Name</string>
+    <string name="online">Online</string>
+    <string name="selectAccountType">Select Account Type</string>
+    <string name="view_transaction">View Transaction</string>
 </resources>
